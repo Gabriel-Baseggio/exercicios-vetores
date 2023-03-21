@@ -14,14 +14,15 @@ public class questao6 {
 			aleatorios[i] = (int) (Math.random()*100);
 		}
 		
-		System.out.print("Digite um número de 0 a 100: ");
+		System.out.print("Digite um nÃºmero de 0 a 100: ");
 		num = sc.nextInt();
 		
 		for (int i = 0; i < aleatorios.length; i++) {
 			if (aleatorios[i] == num) {
-				System.out.println("Está no vetor, na posição " + i);
+				System.out.println("EstÃ¡ no vetor, na posiÃ§Ã£o " + i);
+				break;
 			} else if (i == (aleatorios.length - 1)) {
-				System.out.println("Não estava no vetor");
+				System.out.println("NÃ£o estava no vetor");
 			}
 		}
 		
