@@ -9,9 +9,9 @@ public class questao5 {
 		int[] valores = new int[10];
 		Scanner sc = new Scanner(System.in);
 		
-		for (int i = 0; i < valores.length; i++) {
-			System.out.print("Digite o " + (i + 1) + "บ valor: ");
-			valores[valores.length - 1 - i] = sc.nextInt();
+		for (int i = 1; i <= valores.length; i++) {
+			System.out.print("Digite o " + (i + 1) + "ยบ valor: ");
+			valores[valores.length - i] = sc.nextInt();
 		}
 		
 		for (int valor : valores) {
