@@ -6,8 +6,6 @@ public class questao4 {
 
 	public static void main(String[] args) {
 		
-		//teste
-		
 		double somaPesos = 0, nota;
 		double[] mediasPonderadas, pesosProvas, somaNotasProva;
 		Scanner sc = new Scanner(System.in);
