@@ -25,7 +25,7 @@ public class questao4 {
 			if (vetor1[i] == vetor2[i]) {
 				iguais++;
 			} else if (i == (vetor1.length - 1)) {
-				System.out.println("São diferentes");
+				System.out.println("Conteúdos diferentes!");
 				break;
 			}
 		}
