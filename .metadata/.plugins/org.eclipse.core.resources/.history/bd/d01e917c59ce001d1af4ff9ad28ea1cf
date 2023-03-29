@@ -1,0 +1,51 @@
+package exerciciosVetores3;
+
+import java.util.Scanner;
+
+public class questao4 {
+
+	public static void main(String[] args) {
+		
+		String[] nomes;
+		int qtd, opcao;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite a quantidade de nomes do vetor: ");
+		qtd = sc.nextInt();
+		
+		nomes = new String[qtd];
+		
+		do {
+			System.out.print(" ======== MENU ========\n"
+					+ "1) Cadastrar nome\n"
+					+ "2) Pesquisar nome\n"
+					+ "3) Listar todos os nome\n"
+					+ "0) Sair do programa\n"
+					+ "——————–\n"
+					+ "Digite sua escolha:\n");
+			opcao = sc.nextInt();
+			
+			switch (opcao) {
+			case 1:
+				System.out.print("Digite o nome a ser salvo na posição " + pos + ": ");
+				nomes[pos] = sc.next();
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 0:
+				System.out.println("Saindo do programa!");
+				break;
+			default:
+				System.out.println("Opção incorreta!");
+			}
+		} while (opcao != 0);
+		
+		
+		
+		sc.close();
+
+	}
+
+}

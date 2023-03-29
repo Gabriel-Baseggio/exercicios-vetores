@@ -1,0 +1,18 @@
+package exerciciosVetores3;
+
+import java.util.Random;
+
+public class questao3 {
+
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		int[] temperaturas = new int[121];
+		
+		for (int pos = 0; pos < temperaturas.length; pos++) {
+			temperaturas[pos] = random.nextInt(25) + 15);
+		}		
+
+	}
+
+}
