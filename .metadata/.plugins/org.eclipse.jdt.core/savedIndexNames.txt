@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Aluno\Documents\GitHub\logica-de-programacao\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-426757511.index
-183294401.index
