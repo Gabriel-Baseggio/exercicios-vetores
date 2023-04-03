@@ -14,7 +14,7 @@ public class questao4 {
 				System.out.print("Digite o " + (col + 1) + "º valor da " + (ln + 1) + "ª linha: ");
 				matriz[ln][col] = sc.nextInt();
 
-				matrizCubo[ln][col] = (int) Math.pow(matriz[ln][col], 3);
+				matrizCubo[ln][col] = matriz[ln][col] * matriz[ln][col] * matriz[ln][col];
 			}
 		}
 
