@@ -8,9 +8,9 @@ public class questao1 {
 		int[][] matrizA, matrizB, matrizSom, matrizSub, matrizMul;
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Digite o número de linhas das matrizes A e B: ");
+		System.out.print("Digite o nÃºmero de linhas das matrizes A e B: ");
 		linhas = sc.nextInt();
-		
+
 		System.out.print("Digite o número de colunas das matrizes A e B: ");
 		colunas = sc.nextInt();
 
@@ -22,10 +22,10 @@ public class questao1 {
 
 		for (int ln = 0; ln < matrizA.length; ln++) {
 			for (int col = 0; col < matrizA[0].length; col++) {
-				System.out.print("Digite o " + (col + 1) + "º valor da " + (ln + 1) + "ª linha matriz A: ");
+				System.out.print("Digite o " + (col + 1) + "Âº valor da " + (ln + 1) + "Âª linha matriz A: ");
 				matrizA[ln][col] = sc.nextInt();
 
-				System.out.print("Digite o " + (col + 1) + "º valor da " + (ln + 1) + "ª linha matriz B: ");
+				System.out.print("Digite o " + (col + 1) + "Âº valor da " + (ln + 1) + "Âª linha matriz B: ");
 				matrizB[ln][col] = sc.nextInt();
 				
 				matrizSom[ln][col] = matrizA[ln][col] + matrizB[ln][col];
@@ -44,7 +44,7 @@ public class questao1 {
 			System.out.println();
 		}
 		
-		System.out.println(" ----- Matriz de subtrações ----- ");
+		System.out.println(" ----- Matriz de subtraÃ§Ãµes ----- ");
 		
 		for (int ln = 0; ln < matrizA.length; ln++) {
 			System.out.print("Linha " + (ln + 1) + ": ");
@@ -54,7 +54,7 @@ public class questao1 {
 			System.out.println();
 		}
 		
-		System.out.println(" ----- Matriz de multiplicações ----- ");
+		System.out.println(" ----- Matriz de multiplicaÃ§Ãµes ----- ");
 		
 		for (int ln = 0; ln < matrizA.length; ln++) {
 			System.out.print("Linha " + (ln + 1) + ": ");
