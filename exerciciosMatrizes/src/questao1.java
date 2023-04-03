@@ -4,18 +4,21 @@ public class questao1 {
 
 	public static void main(String[] args) {
 
-		int linhas;
+		int linhas, colunas;
 		int[][] matrizA, matrizB, matrizSom, matrizSub, matrizMul;
 		Scanner sc = new Scanner(System.in);
 
 		System.out.print("Digite o número de linhas das matrizes A e B: ");
 		linhas = sc.nextInt();
+		
+		System.out.print("Digite o número de colunas das matrizes A e B: ");
+		colunas = sc.nextInt();
 
-		matrizA = new int[linhas][1];
-		matrizB = new int[linhas][1];
-		matrizSom = new int[linhas][1];
-		matrizSub = new int[linhas][1];
-		matrizMul = new int[linhas][1];
+		matrizA = new int[linhas][colunas];
+		matrizB = new int[linhas][colunas];
+		matrizSom = new int[linhas][colunas];
+		matrizSub = new int[linhas][colunas];
+		matrizMul = new int[linhas][colunas];
 
 		for (int ln = 0; ln < matrizA.length; ln++) {
 			for (int col = 0; col < matrizA[0].length; col++) {

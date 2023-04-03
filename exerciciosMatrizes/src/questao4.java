@@ -22,6 +22,7 @@ public class questao4 {
 			for (int col = 0; col < matriz[0].length; col++) {
 				if (matriz[ln][col] == busca) {
 					System.out.println("Encontrei na linha " + ln + " e coluna " + col);
+					ln = matriz.length;
 					break;
 				} else if (ln == (matriz.length - 1) && col == (matriz[0].length - 1)) {
 					System.out.println("Não encontrado!");
