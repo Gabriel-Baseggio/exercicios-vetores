@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class questao05 {
 
-	static char[] alfabeto = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-			'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-
 	public static void main(String[] args) {
 
 		char caractere;
@@ -16,17 +13,15 @@ public class questao05 {
 		caractere = sc.next().charAt(0);
 
 
-		System.out.println("É caractere maíúsculo: " + checarCaractere(caractere));
+		System.out.println("Ã‰ alfabÃ©tico maÃ­Ãºsculo: " + checarCaractere(caractere));
 
 		sc.close();
 	}
 
 	static boolean checarCaractere(char caractere) {
 
-		for (int i = 0; i < alfabeto.length; i++) {
-			if (caractere  == alfabeto[i]) {
-				return true;
-			}
+		if (Character.toString(caractere).matches("[A-Z?]")) {
+			return true;
 		}
 		
 		return false;
