@@ -8,11 +8,11 @@ public class questao11 {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Digite o número de posições que cada letra estará a frente: ");
-		int numPosicoes = sc.nextInt();
-
 		System.out.print("Digite sua frase: ");
 		String frase = sc.next();
+
+		System.out.print("Digite o número de posições que cada letra estará a frente: ");
+		int numPosicoes = sc.nextInt();
 		
 		System.out.println("Frase criptografada: " + criptografar(frase, numPosicoes));
 
@@ -32,13 +32,21 @@ public class questao11 {
 			if (caracter == Character.toUpperCase(caracter)) {
 				for (int j = 0; j < alfabetoU.length; j++) {
 					if (alfabetoU[j] == caracter) {
-						criptografada += alfabetoU[j + n];
+						if (j + n > 25) {
+							criptografada += alfabetoU[n - (26 - j)];
+						} else {
+							criptografada += alfabetoU[j + n];							
+						}
 					}
 				}
 			} else {
 				for (int j = 0; j < alfabetoL.length; j++) {
 					if (alfabetoL[j] == caracter) {
-						criptografada += alfabetoL[j + n];
+						if (j + n > 25) {
+							criptografada += alfabetoL[n - (26 - j)];
+						} else {
+							criptografada += alfabetoL[j + n];							
+						}
 					}
 				}
 			}
