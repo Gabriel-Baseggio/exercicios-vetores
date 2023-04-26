@@ -12,20 +12,18 @@ public class questao15 {
 		System.out.print("Digite uma cadeia de caracteres: ");
 		cadeia = sc.next();
 
-		System.out.println("É totalmente maiúscula: " + checarMaiuscula(cadeia));
+		System.out.println("Ã‰ totalmente maiÃºscula: " + checarMaiuscula(cadeia));
 
 		sc.close();
 	}
 
 	static boolean checarMaiuscula(String cadeia) {
 
-		for (int i = 0; i < cadeia.length(); i++) {
-			if (cadeia.charAt(i) != Character.toUpperCase(cadeia.charAt(i))) {
-				return false;
-			}
+		if (cadeia.equals(cadeia.toUpperCase())) {
+			return true;
 		}
 
-		return true;
+		return false;
 
 	}
 
