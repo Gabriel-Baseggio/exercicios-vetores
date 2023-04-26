@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class questao07 {
 
-	static char[] digitos = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-
 	public static void main(String[] args) {
 
 		char caractere;
@@ -15,17 +13,15 @@ public class questao07 {
 		caractere = sc.next().charAt(0);
 
 
-		System.out.println("É dígito: " + checarCaractere(caractere));
+		System.out.println("Ã‰ dÃ­gito: " + checarCaractere(caractere));
 
 		sc.close();
 	}
 
 	static boolean checarCaractere(char caractere) {
 
-		for (int i = 0; i < digitos.length; i++) {
-			if (caractere  == digitos[i]) {
-				return true;
-			}
+		if (Character.toString(caractere).matches("[0-9?]")) {
+			return true;
 		}
 		
 		return false;
