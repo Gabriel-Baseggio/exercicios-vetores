@@ -12,20 +12,18 @@ public class questao13 {
 		System.out.print("Digite uma cadeia de caracteres: ");
 		cadeia = sc.next();
 
-		System.out.println("É uma sequência binária: " + definirBinario(cadeia));
+		System.out.println("Ã‰ uma sequÃªncia binÃ¡ria: " + definirBinario(cadeia));
 
 		sc.close();
 	}
 
 	static boolean definirBinario(String cadeia) {
 
-		for (int i = 0; i < cadeia.length(); i++) {
-			if (cadeia.charAt(i) != '0' && cadeia.charAt(i) != '1') {
-				return false;
-			}
+		if (cadeia.matches("[0-1]*")) {
+			return true;
 		}
-
-		return true;
+		
+		return false;
 
 	}
 
