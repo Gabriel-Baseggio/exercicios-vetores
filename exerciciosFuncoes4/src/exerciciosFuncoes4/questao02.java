@@ -11,7 +11,7 @@ public class questao02 {
 
 		do {
 
-			System.out.print("Digite o valor da prestação: R$");
+			System.out.print("Digite o valor da prestaÃ§Ã£o: R$");
 			valorPrestacao = sc.nextDouble();
 			if (valorPrestacao == 0) {
 				break;
@@ -24,8 +24,8 @@ public class questao02 {
 
 		} while (valorPrestacao != 0);
 
-		System.out.println("Valor total de prestações: R$" + valorTotal);
-		System.out.println("Total de prestações:" + totalContas);
+		System.out.println("Valor total de prestaÃ§Ãµes: R$" + valorTotal);
+		System.out.println("Total de prestaÃ§Ãµes:" + totalContas);
 
 		sc.close();
 	}
@@ -35,6 +35,6 @@ public class questao02 {
 			return valorPrestacao;
 		}
 
-		return (valorPrestacao * 1.03) + (valorPrestacao * (0.1 * diasAtraso));
+		return (valorPrestacao * 1.03) + (valorPrestacao * (0.001 * diasAtraso));
 	}
 }
