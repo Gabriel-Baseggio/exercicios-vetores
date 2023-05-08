@@ -49,9 +49,16 @@ public class jogoDaVelha {
 			}
 
 			checarVencedor(jogo);
+			if (rodada == 9 && !checarVencedor(jogo)) {
+				break;
+			}
 		}
 		desenharJogo(jogo);
-		System.out.println("\n-----------\nVencedor: " + jogador);
+		if (checarVencedor(jogo)) {
+			System.out.println("\n-----------\nVencedor: " + jogador);			
+		} else {
+			System.out.println("\n-----------\nDeu velha!");						
+		}
 		sc.close();
 	}
 
