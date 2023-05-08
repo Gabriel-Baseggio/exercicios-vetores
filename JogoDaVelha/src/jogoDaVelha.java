@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class jogoDaVelha {
 
-	public static void main(String[] argumentos) {
+	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
 		Random random = new Random();
@@ -34,8 +34,10 @@ public class jogoDaVelha {
 				coluna = (sc.nextInt()) - 1;				
 			} else {
 				do {
-					linha = random.nextInt(2);
-					coluna = random.nextInt(2);					
+					linha = random.nextInt(3);
+					coluna = random.nextInt(3);					
+					System.out.println("Linha: " + linha);
+					System.out.print("Coluna: " + coluna);
 				} while (!checarJogada(linha, coluna, jogo));
 			}
 
