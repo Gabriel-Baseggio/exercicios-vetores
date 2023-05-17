@@ -2,29 +2,28 @@ package descobrirRede;
 
 import javax.swing.JOptionPane;
 
-public class descobrirRede {
+public class descobrirRedeMascara {
 
 	public static void main(String[] args) {
 
-		String ip = JOptionPane.showInputDialog("Digite o ip (com a máscara /xx): ");
+		String ip = JOptionPane.showInputDialog("Digite o ip: ");
+		String mascara = JOptionPane.showInputDialog("Digite a máscara: ");
 
-		String[] octetosIp = ip.split("[\\.\\/]");
-		String[] octetosMascara = converterMascara(octetosIp[4]).split("\\.");
-		
-		
+		String[] octetosIp = ip.split("\\.");
+		String[] octetosMascara = mascara.split("\\.");
 		String[] ipRede = new String[4], ipBroadcast = new String[4];
 
-		for (int octeto = 0; octeto < octetosMascara.length; octeto++) {
-			if (octetosMascara[octeto].equals("11111111")) {
+		for (int octeto = 0; octeto < octetosIp.length; octeto++) {
+			if (octetosMascara[octeto].equals("255")) {
 				ipRede[octeto] = octetosIp[octeto];
 				ipBroadcast[octeto] = octetosIp[octeto];
 				continue;
-			} else if (octetosMascara[octeto].equals("00000000")) {
+			} else if (octetosMascara[octeto].equals("0")) {
 				ipRede[octeto] = "0";
 				ipBroadcast[octeto] = "255";
 			} else {
 				String octetoIp = converterBinario(octetosIp[octeto]);
-				String octetoMascara = octetosMascara[octeto];
+				String octetoMascara = converterBinario(octetosMascara[octeto]);
 
 				ipRede[octeto] = converterDecimal(pegarRede(octetoIp, octetoMascara));
 				ipBroadcast[octeto] = converterDecimal(pegarBroadcast(ipRede[octeto], octetoMascara));
@@ -52,26 +51,6 @@ public class descobrirRede {
 
 		return broadcast;
 	}
-	
-	static String converterMascara(String mascara) {
-		String mascaraBinario = "";
-		
-		for (int i = 0; i < 34; i++) {
-			if (i <= Integer.parseInt(mascara)) {				
-				mascaraBinario += "1";
-			} else {
-				mascaraBinario += "0";
-			}
-			
-			if (i % 8 == 0 && i > 1 && i <= 24) {
-				mascaraBinario += ".";
-			}
-			
-		}
-		
-		return mascaraBinario;
-	}
-	
 
 	static String pegarRede(String octetoIp, String octetoMascara) {
 		String rede = "";
